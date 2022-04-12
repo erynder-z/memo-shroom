@@ -1,0 +1,23 @@
+:root {
+  --header: #72004c;
+}
+
+.navbar {
+  height: 5vh;
+  background-color: var(--header);
+}
+
+.header-text {
+  padding: 0.25rem 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-text {
+    font-size: 20px;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}

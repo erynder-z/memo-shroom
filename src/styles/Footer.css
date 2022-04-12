@@ -1,0 +1,15 @@
+:root {
+  --footer: #343a40;
+}
+.footer {
+  height: 3vh;
+  background-color: var(--footer);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:visited {
+  color: rgb(4, 255, 34);
+}
