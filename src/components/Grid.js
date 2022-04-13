@@ -95,8 +95,12 @@ function Grid() {
     console.log('shuffle');
   }, [cards]);
 
-  const markClicked = (id) => {
-    console.log(`card ID${id}`);
+  const markClicked = (cardID) => {
+    const targetID = parseInt(cardID, 10);
+
+    setCards(() =>
+      cards.map((obj) => (obj.dynamicID === targetID ? { ...obj, clicked: true } : obj))
+    );
   };
 
   return (
@@ -109,8 +113,8 @@ function Grid() {
             name={item.name}
             image={item.image}
             clicked={item.clicked}
-            cardClick={(e, id) => {
-              markClicked(id);
+            cardClick={(e, cardID) => {
+              markClicked(cardID);
             }}
           />
         </div>
