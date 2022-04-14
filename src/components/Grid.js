@@ -6,85 +6,74 @@ import deck from './Deck';
 function Grid() {
   const [cards, setCards] = useState([
     {
-      fixedID: 0,
-      dynamicID: 0,
+      id: 0,
       name: 'mushroom1',
       image: deck.mushroom1,
       clicked: false,
     },
     {
-      fixedID: 1,
-      dynamicID: 1,
+      id: 1,
       name: 'mushroom2',
       image: deck.mushroom2,
       clicked: false,
     },
+
     {
-      fixedID: 2,
-      dynamicID: 2,
+      id: 2,
       name: 'mushroom3',
       image: deck.mushroom3,
       clicked: false,
     },
     {
-      fixedID: 3,
-      dynamicID: 3,
+      id: 3,
       name: 'mushroom4',
       image: deck.mushroom4,
       clicked: false,
     },
     {
-      fixedID: 4,
-      dynamicID: 4,
+      id: 4,
       name: 'mushroom5',
       image: deck.mushroom5,
       clicked: false,
     },
     {
-      fixedID: 5,
-      dynamicID: 5,
+      id: 5,
       name: 'mushroom6',
       image: deck.mushroom6,
       clicked: false,
     },
     {
-      fixedID: 6,
-      dynamicID: 6,
+      id: 6,
       name: 'mushroom7',
       image: deck.mushroom7,
       clicked: false,
     },
     {
-      fixedID: 7,
-      dynamicID: 7,
+      id: 7,
       name: 'mushroom8',
       image: deck.mushroom8,
       clicked: false,
     },
     {
-      fixedID: 8,
-      dynamicID: 8,
+      id: 8,
       name: 'mushroom9',
       image: deck.mushroom9,
       clicked: false,
     },
     {
-      fixedID: 9,
-      dynamicID: 9,
+      id: 9,
       name: 'mushroom10',
       image: deck.mushroom10,
       clicked: false,
     },
     {
-      fixedID: 10,
-      dynamicID: 10,
+      id: 10,
       name: 'mushroom11',
       image: deck.mushroom11,
       clicked: false,
     },
     {
-      fixedID: 11,
-      dynamicID: 11,
+      id: 11,
       name: 'mushroom12',
       image: deck.mushroom12,
       clicked: false,
@@ -92,27 +81,30 @@ function Grid() {
   ]);
 
   useEffect(() => {
-    console.log('shuffle');
-  }, [cards]);
+    setCards(() =>
+      cards
+        .map((value) => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value),
+    );
+  }, []);
 
   const markClicked = (cardID) => {
     const targetID = parseInt(cardID, 10);
 
-    setCards(() =>
-      cards.map((obj) => (obj.dynamicID === targetID ? { ...obj, clicked: true } : obj))
-    );
+    setCards(() => cards.map((card) => (card.id === targetID ? { ...card, clicked: true } : card)));
   };
 
   return (
     <div className="grid">
-      {cards.map((item) => (
-        <div key={item.fixedID.toString()} id={item.fixedID.toString()}>
+      {cards.map((card) => (
+        <div key={card.id.toString()} id={card.id.toString()}>
           <Card
-            key={item.dynamicID.toString()}
-            id={item.dynamicID.toString()}
-            name={item.name}
-            image={item.image}
-            clicked={item.clicked}
+            key={card.id.toString()}
+            id={card.id.toString()}
+            name={card.name}
+            image={card.image}
+            clicked={card.clicked}
             cardClick={(e, cardID) => {
               markClicked(cardID);
             }}
