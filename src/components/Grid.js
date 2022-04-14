@@ -79,14 +79,17 @@ function Grid() {
       clicked: false,
     },
   ]);
-
-  useEffect(() => {
+  const shuffleCards = () => {
     setCards(() =>
       cards
-        .map((value) => ({ value, sort: Math.random() }))
+        .map((card) => ({ card, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
-        .map(({ value }) => value),
+        .map(({ card }) => card),
     );
+  };
+
+  useEffect(() => {
+    shuffleCards();
   }, []);
 
   const markClicked = (cardID) => {
@@ -98,7 +101,7 @@ function Grid() {
   return (
     <div className="grid">
       {cards.map((card) => (
-        <div key={card.id.toString()} id={card.id.toString()}>
+        <div key={card.id.toString()} id={card.id.toString()} className="card-container">
           <Card
             key={card.id.toString()}
             id={card.id.toString()}
@@ -107,6 +110,7 @@ function Grid() {
             clicked={card.clicked}
             cardClick={(e, cardID) => {
               markClicked(cardID);
+              shuffleCards();
             }}
           />
         </div>
