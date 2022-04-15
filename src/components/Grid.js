@@ -79,13 +79,12 @@ function Grid() {
       clicked: false,
     },
   ]);
+
   const shuffleCards = () => {
-    setCards(() =>
-      cards
-        .map((card) => ({ card, sort: Math.random() }))
-        .sort((a, b) => a.sort - b.sort)
-        .map(({ card }) => card),
-    );
+    for (let i = cards.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cards[i], cards[j]] = [cards[j], cards[i]];
+    }
   };
 
   useEffect(() => {
