@@ -89,7 +89,7 @@ function Grid() {
 
   useEffect(() => {
     shuffleCards();
-  }, []);
+  }, [...cards.map((card) => card.clicked)]);
 
   const markClicked = (cardID) => {
     const targetID = parseInt(cardID, 10);
@@ -109,7 +109,6 @@ function Grid() {
             clicked={card.clicked}
             cardClick={(e, cardID) => {
               markClicked(cardID);
-              shuffleCards();
             }}
           />
         </div>
