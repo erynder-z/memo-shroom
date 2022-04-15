@@ -1,6 +1,6 @@
 import React from 'react';
 import Score from './Score';
-import Grid from './Grid';
+import Game from './Game';
 
 function Main() {
   return (
@@ -9,7 +9,7 @@ function Main() {
         <Score />
       </div>
       <div className="grid-container">
-        <Grid />
+        <Game />
       </div>
     </div>
   );

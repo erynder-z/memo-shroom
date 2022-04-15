@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Grid.css';
+import '../styles/Game.css';
 import Card from './Card';
 import deck from './Deck';
 
-function Grid() {
+function Game() {
   const [cards, setCards] = useState(deck);
 
   const shuffleCards = () => {
@@ -43,4 +43,4 @@ function Grid() {
   );
 }
 
-export default Grid;
+export default Game;
