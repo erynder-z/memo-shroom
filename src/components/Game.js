@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Game.css';
 import Card from './Card';
 import deck from './Deck';
 
-function Game() {
+function Game(props) {
   const [cards, setCards] = useState(deck);
+  const { handleScoreUpdate } = props;
 
   const shuffleCards = () => {
     for (let i = cards.length - 1; i > 0; i -= 1) {
@@ -20,7 +22,15 @@ function Game() {
   const markClicked = (cardID) => {
     const targetID = parseInt(cardID, 10);
 
-    setCards(() => cards.map((card) => (card.id === targetID ? { ...card, clicked: true } : card)));
+    const cardBefore = cards.find((card) => card.id === targetID);
+    if (cardBefore.clicked === true) {
+      console.log('already clicked');
+    } else {
+      setCards(() =>
+        cards.map((card) => (card.id === targetID ? { ...card, clicked: true } : card)),
+      );
+      handleScoreUpdate();
+    }
   };
 
   return (
@@ -44,3 +54,7 @@ function Game() {
 }
 
 export default Game;
+
+Game.propTypes = {
+  handleScoreUpdate: PropTypes.func.isRequired,
+};

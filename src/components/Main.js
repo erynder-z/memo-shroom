@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Score from './Score';
 import Game from './Game';
 
 function Main() {
+  const [score, setScore] = useState(0);
+
+  const updateScore = () => {
+    setScore(() => score + 1);
+  };
+
   return (
     <div className="main-wrapper">
       <div className="score-container">
-        <Score />
+        <Score currentScore={score} />
       </div>
       <div className="grid-container">
-        <Game />
+        <Game
+          handleScoreUpdate={() => {
+            updateScore();
+          }}
+        />
       </div>
     </div>
   );
