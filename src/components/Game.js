@@ -4,6 +4,7 @@ import '../styles/Game.css';
 import Card from './Card';
 import Gameover from './Gameover';
 import deck from './Deck';
+import Victory from './Victory';
 
 function Game(props) {
   const [cards, setCards] = useState(deck);
@@ -43,6 +44,7 @@ function Game(props) {
 
   return (
     <div className="grid">
+      {currentScore >= 18 && <Victory currentScore={currentScore} resetClick={resetGame} />}
       {gameover === true && <Gameover currentScore={currentScore} resetClick={resetGame} />}
       {cards.map((card) => (
         <div key={card.id.toString()} id={card.id.toString()} className="card-container">

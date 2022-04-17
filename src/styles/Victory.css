@@ -1,0 +1,37 @@
+.victory-overlay {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.333);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.victory-body {
+  height: 30vh;
+  width: 20vw;
+  background-color: #feffde;
+}
+
+.restart-button {
+  background-color: #822659;
+  color: whitesmoke;
+  height: 5vh;
+  width: 20vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .gameover-body,
+  .restart-button {
+    width: 90vw;
+  }
+}
