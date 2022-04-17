@@ -10,6 +10,12 @@ import mushroom9 from '../assets/mushrooms/mush9.png';
 import mushroom10 from '../assets/mushrooms/mush10.png';
 import mushroom11 from '../assets/mushrooms/mush11.png';
 import mushroom12 from '../assets/mushrooms/mush12.png';
+import mushroom13 from '../assets/mushrooms/mush13.png';
+import mushroom14 from '../assets/mushrooms/mush14.png';
+import mushroom15 from '../assets/mushrooms/mush15.png';
+import mushroom16 from '../assets/mushrooms/mush16.png';
+import mushroom17 from '../assets/mushrooms/mush17.png';
+import mushroom18 from '../assets/mushrooms/mush18.png';
 
 const deck = [
   {
@@ -83,6 +89,42 @@ const deck = [
     id: 11,
     name: 'mushroom12',
     image: mushroom12,
+    clicked: false,
+  },
+  {
+    id: 12,
+    name: 'mushroom13',
+    image: mushroom13,
+    clicked: false,
+  },
+  {
+    id: 13,
+    name: 'mushroom14',
+    image: mushroom14,
+    clicked: false,
+  },
+  {
+    id: 14,
+    name: 'mushroom15',
+    image: mushroom15,
+    clicked: false,
+  },
+  {
+    id: 15,
+    name: 'mushroom16',
+    image: mushroom16,
+    clicked: false,
+  },
+  {
+    id: 16,
+    name: 'mushroom17',
+    image: mushroom17,
+    clicked: false,
+  },
+  {
+    id: 17,
+    name: 'mushroom18',
+    image: mushroom18,
     clicked: false,
   },
 ];
