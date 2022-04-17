@@ -14,15 +14,15 @@
 
 .victory-body {
   height: 30vh;
-  width: 20vw;
+  width: 25vw;
   background-color: #feffde;
 }
 
-.restart-button {
+.restart-button-vi {
   background-color: #822659;
   color: whitesmoke;
   height: 5vh;
-  width: 20vw;
+  width: 25vw;
   cursor: pointer;
   display: flex;
   justify-content: center;

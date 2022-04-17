@@ -14,15 +14,15 @@
 
 .gameover-body {
   height: 30vh;
-  width: 20vw;
-  background-color: whitesmoke;
+  width: 25vw;
+  background-color: #ededed;
 }
 
-.restart-button {
-  background-color: crimson;
+.restart-button-go {
+  background-color: #da0037;
   color: whitesmoke;
   height: 5vh;
-  width: 20vw;
+  width: 25vw;
   cursor: pointer;
   display: flex;
   justify-content: center;

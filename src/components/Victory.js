@@ -12,7 +12,7 @@ function Victory(props) {
         <p>You got it all right!</p>
       </div>
       <div
-        className="restart-button"
+        className="restart-button-vi"
         onClick={resetClick}
         onKeyDown={resetClick}
         role="button"

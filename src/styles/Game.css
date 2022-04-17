@@ -1,6 +1,7 @@
 .grid-container {
   background-color: #8b9a46;
   display: grid;
+  max-width: 100%;
 }
 
 .grid {

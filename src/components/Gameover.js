@@ -12,7 +12,7 @@ function Gameover(props) {
         {currentScore < 18 && <p>Can you get 18 points?</p>}
       </div>
       <div
-        className="restart-button"
+        className="restart-button-go"
         onClick={resetClick}
         onKeyDown={resetClick}
         role="button"
