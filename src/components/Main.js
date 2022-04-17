@@ -9,6 +9,10 @@ function Main() {
     setScore(() => score + 1);
   };
 
+  const resetScore = () => {
+    setScore(() => 0);
+  };
+
   return (
     <div className="main-wrapper">
       <div className="score-container">
@@ -16,8 +20,12 @@ function Main() {
       </div>
       <div className="grid-container">
         <Game
+          currentScore={score}
           handleScoreUpdate={() => {
             updateScore();
+          }}
+          handleScoreReset={() => {
+            resetScore();
           }}
         />
       </div>
