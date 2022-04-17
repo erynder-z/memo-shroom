@@ -18,6 +18,8 @@ function Game(props) {
     }
   };
 
+  shuffleCards();
+
   useEffect(() => {
     shuffleCards();
   }, [...cards.map((card) => card.clicked)]);
