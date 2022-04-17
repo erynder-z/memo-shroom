@@ -1,4 +1,14 @@
 .main-wrapper {
-  height: 92vh;
-  background-color: beige;
+  height: 95vh;
+  background-color: #8b9a46;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-wrapper {
+    height: auto;
+  }
 }

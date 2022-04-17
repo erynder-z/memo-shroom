@@ -1,5 +1,21 @@
 .score-container {
-  background-color: goldenrod;
+  background-color: #464e2e;
+  color: whitesmoke;
   height: 10%;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .score-container {
+    padding: 0.2rem 0;
+  }
 }

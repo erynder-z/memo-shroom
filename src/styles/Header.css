@@ -1,14 +1,12 @@
-:root {
-  --header: #72004c;
-}
-
 .navbar {
   height: 5vh;
-  background-color: var(--header);
+  background-color: #464e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-text {
-  padding: 0.25rem 0 0 1rem;
   font-size: 1.5rem;
   font-weight: bolder;
   color: whitesmoke;

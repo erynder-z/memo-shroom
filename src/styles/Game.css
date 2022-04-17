@@ -1,14 +1,19 @@
 .grid-container {
-  height: 90%;
-  /*  width: 75%; */
-  background-color: burlywood;
+  background-color: #8b9a46;
   display: grid;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
 }

@@ -12,9 +12,9 @@ function Score(props) {
     }
   }, [currentScore]);
   return (
-    <div className="score-container">
-      <div className="score">Score: {currentScore}</div>
-      <div className="score">Highscore: {highscore}</div>
+    <div className="score">
+      <div className="current-score">Score: {currentScore}</div>
+      <div className="high-score">Highscore: {highscore}</div>
     </div>
   );
 }
