@@ -4,6 +4,7 @@ import '../styles/Gameover.css';
 
 function Gameover(props) {
   const { currentScore, resetClick } = props;
+
   return (
     <div className="gameover-overlay">
       <div className="gameover-body">

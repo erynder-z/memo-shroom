@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/Game.css';
 import Card from './Card';
 import Gameover from './Gameover';
 import deck from './Deck';
 import Victory from './Victory';
+import '../styles/Game.css';
 
 function Game(props) {
   const [cards, setCards] = useState(deck);
@@ -17,12 +17,6 @@ function Game(props) {
       [cards[i], cards[j]] = [cards[j], cards[i]];
     }
   };
-
-  shuffleCards();
-
-  useEffect(() => {
-    shuffleCards();
-  }, [...cards.map((card) => card.clicked)]);
 
   const markClicked = (cardID) => {
     const targetID = parseInt(cardID, 10);
@@ -43,6 +37,12 @@ function Game(props) {
     setGameover(() => false);
     handleScoreReset();
   };
+
+  useEffect(() => {
+    shuffleCards();
+  }, [...cards.map((card) => card.clicked)]);
+
+  shuffleCards();
 
   return (
     <div className="grid">

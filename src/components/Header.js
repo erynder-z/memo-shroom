@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function Header() {
   const [title, setTitle] = useState('Memo-shroom');
+
   const showAbout = () => {
     setTitle(() => (
       <div className="info">

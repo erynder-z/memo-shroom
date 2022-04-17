@@ -4,6 +4,7 @@ import '../styles/Victory.css';
 
 function Victory(props) {
   const { currentScore, resetClick } = props;
+
   return (
     <div className="victory-overlay">
       <div className="victory-body">

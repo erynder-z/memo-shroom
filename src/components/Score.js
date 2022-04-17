@@ -11,6 +11,7 @@ function Score(props) {
       setHighscore(() => currentScore);
     }
   }, [currentScore]);
+
   return (
     <div className="score">
       <div className="current-score">Score: {currentScore}</div>
