@@ -9,6 +9,7 @@ function Gameover(props) {
       <div className="gameover-body">
         <h2>Game over</h2>
         <h4>Your score is {currentScore}</h4>
+        {currentScore < 18 && <p>Can you get 18 points?</p>}
       </div>
       <div
         className="restart-button"
