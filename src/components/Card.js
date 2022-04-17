@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import '../styles/Card.css';
 
 function Card(props) {
-  const { id, name, image, /* clicked, */ cardClick } = props;
+  const { id, name, image, cardClick } = props;
   return (
     <div
       className="card"
       id={id}
       name={name}
-      /* clicked={clicked} */
       onClick={(e) => {
         cardClick(e, id);
       }}
@@ -24,6 +23,5 @@ Card.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  /*  clicked: PropTypes.string.isRequired, */
   cardClick: PropTypes.func.isRequired,
 };
