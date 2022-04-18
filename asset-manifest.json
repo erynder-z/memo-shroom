@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memo-shroom/static/css/main.cc295d40.css",
-    "main.js": "/memo-shroom/static/js/main.58ac0dc6.js",
+    "main.css": "/memo-shroom/static/css/main.2e03523b.css",
+    "main.js": "/memo-shroom/static/js/main.a649b941.js",
     "static/media/mush17.png": "/memo-shroom/static/media/mush17.a4e905f720777dc7dcd1.png",
     "static/media/mush14.png": "/memo-shroom/static/media/mush14.5656046ec9d11a6f7463.png",
     "static/media/mush4.png": "/memo-shroom/static/media/mush4.939afc3fa6f4b3d6265f.png",
@@ -21,11 +21,11 @@
     "static/media/mush9.png": "/memo-shroom/static/media/mush9.d55791c235af8ce1acee.png",
     "static/media/mush12.png": "/memo-shroom/static/media/mush12.b482045f1a3afd3dabf0.png",
     "index.html": "/memo-shroom/index.html",
-    "main.cc295d40.css.map": "/memo-shroom/static/css/main.cc295d40.css.map",
-    "main.58ac0dc6.js.map": "/memo-shroom/static/js/main.58ac0dc6.js.map"
+    "main.2e03523b.css.map": "/memo-shroom/static/css/main.2e03523b.css.map",
+    "main.a649b941.js.map": "/memo-shroom/static/js/main.a649b941.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc295d40.css",
-    "static/js/main.58ac0dc6.js"
+    "static/css/main.2e03523b.css",
+    "static/js/main.a649b941.js"
   ]
 }
