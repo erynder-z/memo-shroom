@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import '../styles/Card.css';
 
 function Card(props) {
-  const { id, name, image, cardClick } = props;
+  const { id, name, image, cardClick, gameover } = props;
   return (
     <div
-      className="card"
+      className={`card ${gameover === true ? 'shake' : ''} `}
       id={id}
       name={name}
       onClick={(e) => {
@@ -24,4 +24,5 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   cardClick: PropTypes.func.isRequired,
+  gameover: PropTypes.bool.isRequired,
 };

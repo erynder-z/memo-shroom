@@ -46,11 +46,10 @@ function Game(props) {
 
   return (
     <div className="grid">
-      {currentScore >= 18 && <Victory currentScore={currentScore} resetClick={resetGame} />}
-      {gameover === true && <Gameover currentScore={currentScore} resetClick={resetGame} />}
       {cards.map((card) => (
         <div key={card.id.toString()} id={card.id.toString()} className="card-container">
           <Card
+            gameover={gameover}
             key={card.id.toString()}
             id={card.id.toString()}
             name={card.name}
@@ -62,6 +61,8 @@ function Game(props) {
           />
         </div>
       ))}
+      {currentScore >= 18 && <Victory currentScore={currentScore} resetClick={resetGame} />}
+      {gameover === true && <Gameover currentScore={currentScore} resetClick={resetGame} />}
     </div>
   );
 }
