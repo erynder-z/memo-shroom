@@ -1,7 +1,7 @@
 .gameover-overlay {
   height: 100%;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -31,7 +31,7 @@
 
 @media only screen and (max-width: 768px) {
   .gameover-body,
-  .restart-button {
+  .restart-button-go {
     width: 90vw;
   }
 }
